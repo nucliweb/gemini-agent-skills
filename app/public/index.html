@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPerf Workshop Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistemas de Agentes Deterministas Lab</h1>
+    </header>
+
+    <main>
+        <!-- CLS Issue: Banner dinámico -->
+        <div id="dynamic-banner"></div>
+
+        <!-- LCP Issue: Imagen grande sin fetchpriority ni lazy -->
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=4000" alt="LCP Image" id="hero-image">
+
+        <section id="content">
+            <p>Este es el laboratorio para el taller. La IA debe detectar y arreglar estos problemas.</p>
+            
+            <!-- INP Issue: Botón con Long Task -->
+            <button id="inp-btn">Realizar Acción Crítica (INP Check)</button>
+        </section>
+    </main>
+
+    <script>
+        // Simulamos la carga tardía de un banner que causa CLS
+        setTimeout(() => {
+            const banner = document.getElementById('dynamic-banner');
+            banner.innerHTML = '<div style="height: 150px; background: #ffcc00; display: flex; align-items: center; justify-content: center;"><h1>OFERTA FLASH!</h1></div>';
+        }, 1500);
+
+        // Simulamos un bloqueo del hilo principal (INP)
+        document.getElementById('inp-btn').addEventListener('click', () => {
+            const start = Date.now();
+            while (Date.now() - start < 300) {
+                // Bucle bloqueante de 300ms
+            }
+            alert('Acción completada con delay!');
+        });
+    </script>
+</body>
+</html>
