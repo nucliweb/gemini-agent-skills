@@ -59,6 +59,21 @@ gemini mcp add chrome-devtools npx -y chrome-devtools-mcp@latest --autoConnect -
 
 Sigue los módulos en orden numérico. Cada uno construye sobre el anterior.
 
+## Recursos
+
+- [gemini-agent-skills en GitHub](https://github.com/nucliweb/gemini-agent-skills)
+- [Aprende Core Web Vitals](https://web.dev/explore/learn-core-web-vitals)
+- [Treo Site Speed](https://treo.sh/sitespeed)
+- [CrUX Vis](https://cruxvis.withgoogle.com/)
+- [Documentación Chrome DevTools](https://developer.chrome.com/docs/devtools)
+- [Chrome DevTools MCP](https://developer.chrome.com/blog/chrome-devtools-mcp)
+- [Agent Skills](https://agentskills.io/)
+- [WebPerf Snippets](https://webperf-snippets.nucliweb.net/)
+- [Performance DevTools @ Nerdearla](https://slides.com/joanleon/performance-devtools-nerdearla/)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Skills.sh](https://skills.sh/)
+- [WebPerf Snippets Agent Skills (Blog)](https://joanleon.dev/posts/webperf-snippets-agent-skills/)
+
 ## Sobre mí
 
 [![Joan Leon](./assets/about.webp)](https://slides.com/joanleon/about)
